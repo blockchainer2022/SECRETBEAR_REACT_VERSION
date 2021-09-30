@@ -6,6 +6,7 @@ import HeroImg from "../../assets/images/bear-1.png";
 import Slider, { SliderTooltip } from "rc-slider";
 import "rc-slider/assets/index.css";
 const Index = ({ days, hours, minutes, seconds, difference }) => {
+  // eslint-disable-next-line no-unused-vars
   const [value, setValue] = useState(0);
 
   const { Handle } = Slider;

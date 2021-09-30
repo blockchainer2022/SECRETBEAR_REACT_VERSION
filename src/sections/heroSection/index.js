@@ -5,7 +5,18 @@ import "./style.css";
 import HeroImg from "../../assets/images/bear-1.png";
 import Slider, { SliderTooltip } from "rc-slider";
 import "rc-slider/assets/index.css";
-const Index = ({ days, hours, minutes, seconds, difference }) => {
+const Index = ({
+  days,
+  hours,
+  minutes,
+  seconds,
+  difference,
+  account,
+  mint,
+  totalSupply,
+  displayPrice,
+  maxSupply,
+}) => {
   // eslint-disable-next-line no-unused-vars
   const [value, setValue] = useState(0);
 
@@ -47,13 +58,35 @@ const Index = ({ days, hours, minutes, seconds, difference }) => {
               <div className="slider ml-0 ml-md-2 mx-auto text-center text-md-left">
                 <div className="slider-text d-flex justify-content-between align-items-center mb-1 ">
                   <p>Total Bears Minted</p>
-                  <p>0/0</p>
+                  <p>
+                    {totalSupply}/{maxSupply}
+                  </p>
                 </div>
-                <Slider min={0} max={20} defaultValue={1} handle={handle} />
+                <Slider min={1} max={20} defaultValue={1} handle={handle} />
                 <p className="slider-bottom-text text-center mt-2">
-                  Mint 1 Secret Bear (0.000 Ether)
+                  {account
+                    ? ` Mint ${value} Secret Bear (${(
+                        value * displayPrice
+                      ).toFixed(4)}{" "}
+                    Ether)`
+                    : "Connect Account"}
                 </p>
-                <button className="mint-now mx-auto ">Mint Now</button>
+                <button
+                  style={
+                    !account || totalSupply === maxSupply
+                      ? {
+                          backgroundColor: "grey",
+                          color: "white",
+                          cursor: "default",
+                          pointerEvents: "none",
+                        }
+                      : null
+                  }
+                  className="mint-now mx-auto "
+                  onClick={() => mint(value)}
+                >
+                  Mint Now
+                </button>
               </div>
             )}
           </div>

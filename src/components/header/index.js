@@ -2,7 +2,8 @@
 import { useState } from "react";
 import "./style.css";
 import Logo from "../../assets/images/logo.png";
-const Index = ({ difference }) => {
+
+const Index = ({ difference, account, loadWeb3 }) => {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
   window.addEventListener("scroll", () => {
@@ -48,11 +49,16 @@ const Index = ({ difference }) => {
               <li className="list-item">
                 <a href="#team">Team</a>
               </li>
-              {difference < 0 ? (
-                <li>
-                  <button className="mint-now">Connect</button>
-                </li>
-              ) : null}
+
+              <li>
+                <button className="mint-now" onClick={() => loadWeb3()}>
+                  {account
+                    ? account.slice(0, 8) +
+                      "..." +
+                      account.slice(account.length - 5)
+                    : "CONNECT"}
+                </button>
+              </li>
             </ul>
           </div>
           <div className="toggle-bar d-md-none" onClick={openHandler}>
@@ -64,6 +70,8 @@ const Index = ({ difference }) => {
         openHandler={openHandler}
         open={open}
         difference={difference}
+        loadWeb3={loadWeb3}
+        account={account}
       />
     </nav>
   );
@@ -71,7 +79,7 @@ const Index = ({ difference }) => {
 
 export default Index;
 
-const MobileBar = ({ openHandler, open, difference }) => (
+const MobileBar = ({ openHandler, open, difference, loadWeb3, account }) => (
   <div className={`mobile-menu ${open ? "active" : null}`}>
     <div className="close-btn closebtn" onClick={openHandler}>
       <span style={{ fontSize: "35px", fontWeight: "bold" }}>&times;</span>
@@ -108,7 +116,14 @@ const MobileBar = ({ openHandler, open, difference }) => (
         </li>
         {difference < 0 ? (
           <li>
-            <button className="mint-now">Connect</button>
+            <button className="mint-now" onClick={() => loadWeb3()}>
+              {" "}
+              {account
+                ? account.slice(0, 8) +
+                  "..." +
+                  account.slice(account.length - 5)
+                : "CONNECT"}
+            </button>
           </li>
         ) : null}
       </ul>

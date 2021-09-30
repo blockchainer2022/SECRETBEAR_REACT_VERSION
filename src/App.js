@@ -12,6 +12,7 @@ function App() {
   const [account, setAccount] = useState(null);
   const [contract, setContract] = useState(null);
   const [totalSupply, setTotalSupply] = useState(0);
+  const [maxSupply, setMaxSupply] = useState(0);
   const [price, setPrice] = useState(0);
   const [displayPrice, setDisplayPrice] = useState(0);
   const [lessMintAmountAlert, setLessMintAmountAlert] = useState(false);
@@ -54,7 +55,7 @@ function App() {
   }
 
   useEffect(() => {
-    // loadWeb3();
+    loadWeb3();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -69,7 +70,7 @@ function App() {
     // you are connected to main net
     // Please connect to main net
 
-    if (chainId === 1) {
+    if (chainId === 4) {
       toast(`You are connected to main net`, {
         type: "success",
         position: toast.POSITION.BOTTOM_CENTER,
@@ -79,6 +80,9 @@ function App() {
 
       const price = await contract.methods.price().call();
       setPrice(price);
+      const MAX_SUPPlY = await contract.methods.MAX_SUPPlY().call();
+      // console.log("MAX_SUPPLY:", MAX_SUPPlY);
+      setMaxSupply(MAX_SUPPlY);
       const displayPrice = window.web3.utils.fromWei(price, "ether");
       setDisplayPrice(displayPrice);
 
@@ -124,7 +128,7 @@ function App() {
 
   async function mint(mintCount) {
     if (contract) {
-      if (chainId === 1) {
+      if (chainId === 4) {
         if (mintCount === 0) {
           setLessMintAmountAlert(true);
         } else {
@@ -187,7 +191,14 @@ function App() {
 
   return (
     <>
-      <Home />
+      <Home
+        account={account}
+        mint={mint}
+        totalSupply={totalSupply}
+        displayPrice={displayPrice}
+        loadWeb3={loadWeb3}
+        maxSupply={maxSupply}
+      />
       <InformationModal
         open={lessMintAmountAlert}
         onClose={setLessMintAmountAlert}

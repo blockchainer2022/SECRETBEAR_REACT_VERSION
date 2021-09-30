@@ -14,7 +14,14 @@ import {
 } from "../sections";
 import moment from "moment";
 toast.configure();
-const Home = () => {
+const Home = ({
+  account,
+  displayPrice,
+  totalSupply,
+  loadWeb3,
+  mint,
+  maxSupply,
+}) => {
   const [show, setShow] = useState(false);
   let difference = +new moment("2021-10-1 22:00").utc() - +new Date();
   const d = new Date();
@@ -49,7 +56,7 @@ const Home = () => {
   return (
     <div id="top">
       <a href="#top" className={`sticky-btn ${show ? "show" : null}`}></a>
-      <Layout difference={difference}>
+      <Layout difference={difference} loadWeb3={loadWeb3} account={account}>
         <div className="main-bg">
           <HeroSection
             days={days}
@@ -57,6 +64,11 @@ const Home = () => {
             minutes={minutes}
             seconds={seconds}
             difference={difference}
+            account={account}
+            mint={mint}
+            totalSupply={totalSupply}
+            displayPrice={displayPrice}
+            maxSupply={maxSupply}
           />
           <AboutSection />
         </div>

@@ -77,9 +77,9 @@ const ConfirmationLoadingPopup = ({ open, title, message }) => {
               {title}
             </h3>
           </header>{" "}
-          <div style={{ textAlign: "center" }}>
+          {/* <div style={{ textAlign: "center" }}>
             <div class="spinner-border text-success"></div>
-          </div>
+          </div> */}
           <section className="bn-onboard-custom bn-onboard-modal-selected-wallet svelte-mi6ahc">
             <p
               style={{

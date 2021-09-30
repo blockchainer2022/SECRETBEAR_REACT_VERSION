@@ -18,8 +18,8 @@ const Index = () => {
               </div>
               <p>Founder</p>
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquam corrupti similique.
+                {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquam corrupti similique. */}
               </span>
             </div>
           </div>
@@ -30,8 +30,8 @@ const Index = () => {
               </div>
               <p>Co-Founder</p>
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquam corrupti similique.
+                {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquam corrupti similique. */}
               </span>
             </div>
           </div>
@@ -42,8 +42,8 @@ const Index = () => {
               </div>
               <p>Illustrator</p>
               <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquam corrupti similique.
+                {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquam corrupti similique. */}
               </span>
             </div>
           </div>

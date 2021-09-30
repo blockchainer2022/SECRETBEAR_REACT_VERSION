@@ -13,7 +13,7 @@ import {
 import moment from "moment";
 const Home = () => {
   const [show, setShow] = useState(false);
-  const difference = +new moment("2021-9-2 12:00:00").utc() - +new Date();
+  const difference = +new moment("2021-10-1 21:00:00").utc() - +new Date();
 
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);

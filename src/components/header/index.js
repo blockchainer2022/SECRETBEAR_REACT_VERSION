@@ -61,8 +61,20 @@ const Index = ({ difference, account, loadWeb3 }) => {
               </li>
             </ul>
           </div>
-          <div className="toggle-bar d-md-none" onClick={openHandler}>
-            <i className="fas fa-bars"></i>
+          <div className="d-flex align-items-center">
+            <button
+              className="mint-now d-md-none mr-3"
+              onClick={() => loadWeb3()}
+            >
+              {account
+                ? account.slice(0, 4) +
+                  "..." +
+                  account.slice(account.length - 5)
+                : "CONNECT"}
+            </button>
+            <div className="toggle-bar d-md-none" onClick={openHandler}>
+              <i className="fas fa-bars"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -114,18 +126,15 @@ const MobileBar = ({ openHandler, open, difference, loadWeb3, account }) => (
         <li>
           <a href="#team">Team </a>
         </li>
-        {difference < 0 ? (
-          <li>
-            <button className="mint-now" onClick={() => loadWeb3()}>
-              {" "}
-              {account
-                ? account.slice(0, 8) +
-                  "..." +
-                  account.slice(account.length - 5)
-                : "CONNECT"}
-            </button>
-          </li>
-        ) : null}
+
+        <li>
+          {/* <button className="mint-now" onClick={() => loadWeb3()}>
+            {" "}
+            {account
+              ? account.slice(0, 8) + "..." + account.slice(account.length - 5)
+              : "CONNECT"}
+          </button> */}
+        </li>
       </ul>
     </div>
   </div>

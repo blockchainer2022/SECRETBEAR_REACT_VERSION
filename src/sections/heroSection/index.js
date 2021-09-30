@@ -67,7 +67,7 @@ const Index = ({
                   {account
                     ? ` Mint ${value} Secret Bear (${(
                         value * displayPrice
-                      ).toFixed(4)}{" "}
+                      ).toFixed(4)}
                     Ether)`
                     : "Connect Account"}
                 </p>

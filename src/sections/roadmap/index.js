@@ -82,7 +82,7 @@ const Index = () => {
           <div className="col-12">
             <div className="map-box ">
               <h4>100%</h4>
-              <p>We will create the Baby Bear Intelligence Society.</p>
+              <p>We will create the Secret Baby Bear Society.</p>
             </div>
           </div>
         </div>

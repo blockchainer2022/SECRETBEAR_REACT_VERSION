@@ -39,6 +39,9 @@
   left: 0;
   z-index: 999999;
   background-color: var(--primary-color);
+  margin: 0;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 .navbar.active .navbar-brand {
   margin-top: 0;
@@ -100,4 +103,7 @@
 
 .navbar .mint-now {
   margin-top: 0;
+}
+.navbar.active .menu ul li {
+  padding: 10px 25px;
 }

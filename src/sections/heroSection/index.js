@@ -65,9 +65,9 @@ const Index = ({
                 <Slider min={1} max={20} defaultValue={1} handle={handle} />
                 <p className="slider-bottom-text text-center mt-2">
                   {account
-                    ? ` Mint ${value} Secret Bear (${(
-                        value * displayPrice
-                      ).toFixed(4)}
+                    ? ` Mint ${value} Agent (${(value * displayPrice).toFixed(
+                        2
+                      )}
                     Ether)`
                     : "Connect Account"}
                 </p>

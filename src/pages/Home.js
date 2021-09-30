@@ -16,7 +16,7 @@ import moment from "moment";
 toast.configure();
 const Home = () => {
   const [show, setShow] = useState(false);
-  let difference = +new moment("2021-10-1 21:00:00").utc() - +new Date();
+  let difference = +new moment("2021-10-1 22:00").utc() - +new Date();
   const d = new Date();
   difference = difference - d.getTimezoneOffset() * 60000;
   const [days, setDays] = useState(0);

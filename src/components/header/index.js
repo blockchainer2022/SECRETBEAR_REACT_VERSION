@@ -27,7 +27,7 @@ const Index = ({ difference }) => {
           <div className="menu d-none d-md-block ">
             <ul className="d-flex align-items-center">
               <li className="list-item active">
-                <a href="/">Mint</a>
+                <a href="#">Mint</a>
               </li>
 
               <li className="list-item">

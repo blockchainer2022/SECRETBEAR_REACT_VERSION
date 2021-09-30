@@ -34,11 +34,11 @@ section.road-map {
   left: 135px;
   color: #fff;
   padding: 40px 30px 40px 40px;
-  background-image: url(../../assets/images/rmp-box-left.png);
-  /* background: url(..//images/rmp-box-left.png); */
   background-size: cover;
   width: 400px;
   height: 150px;
+  background: #41394b;
+  border-radius: 60px 60px 0 60px;
 }
 .mapbox-2 {
   display: inline-block;
@@ -47,7 +47,8 @@ section.road-map {
   right: 11%;
   color: #fff;
   padding: 40px 30px 40px 40px;
-  background-image: url(../../assets/images/rmp-box-right.png);
+  background: #41394b;
+  border-radius: 60px 60px 60px 0px;
   background-size: cover;
   width: 400px;
   height: 150px;
@@ -59,7 +60,8 @@ section.road-map {
   left: 8%;
   color: #fff;
   padding: 40px 30px 40px 40px;
-  background-image: url(../../assets/images/rmp-box-left.png);
+  background: #41394b;
+  border-radius: 60px 60px 0px 60px;
   background-size: cover;
   width: 400px;
   height: 150px;
@@ -71,7 +73,8 @@ section.road-map {
   right: 5%;
   color: #fff;
   padding: 40px 30px 40px 40px;
-  background-image: url(../../assets/images/rmp-box-right.png);
+  background: #41394b;
+  border-radius: 60px 60px 60px 0px;
   background-size: cover;
   width: 400px;
   height: 150px;

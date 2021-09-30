@@ -44,7 +44,7 @@ const Index = ({ days, hours, minutes, seconds, difference }) => {
                 seconds={seconds}
               />
             ) : (
-              <div className="slider ml-0 ml-md-2 mx-auto">
+              <div className="slider ml-0 ml-md-2 mx-auto text-center text-md-left">
                 <div className="slider-text d-flex justify-content-between align-items-center mb-1 ">
                   <p>Total Bears Minted</p>
                   <p>0/0</p>
@@ -53,7 +53,7 @@ const Index = ({ days, hours, minutes, seconds, difference }) => {
                 <p className="slider-bottom-text text-center mt-2">
                   Mint 1 Secret Bear (0.000 Ether)
                 </p>
-                <button className="mint-now mx-auto mx-md-0">Mint Now</button>
+                <button className="mint-now mx-auto ">Mint Now</button>
               </div>
             )}
           </div>

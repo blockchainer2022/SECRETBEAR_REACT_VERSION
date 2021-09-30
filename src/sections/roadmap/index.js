@@ -44,7 +44,7 @@ const Index = () => {
           <div class="mapbox-4 wow fadeInRight">
             <div class="mapbox-inner">
               <h4>100%</h4>
-              <p>We will create the Baby Bear Intelligence Society.</p>
+              <p> We will create the Secret Baby Bear Society.</p>
             </div>
           </div>
         </div>

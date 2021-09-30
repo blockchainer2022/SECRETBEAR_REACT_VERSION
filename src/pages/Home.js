@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import { useState, useEffect } from "react";
 import { Layout } from "../components";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   HeroSection,
   AboutSection,
@@ -11,10 +13,12 @@ import {
   TeamSection,
 } from "../sections";
 import moment from "moment";
+toast.configure();
 const Home = () => {
   const [show, setShow] = useState(false);
-  const difference = +new moment("2021-10-1 21:00:00").utc() - +new Date();
-
+  let difference = +new moment("2021-10-1 21:00:00").utc() - +new Date();
+  const d = new Date();
+  difference = difference - d.getTimezoneOffset() * 60000;
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);

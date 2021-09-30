@@ -203,7 +203,7 @@ function App() {
         open={lessMintAmountAlert}
         onClose={setLessMintAmountAlert}
         title="Oops"
-        text="Atleast 1 Viral Goat should be minted"
+        text="Atleast 1 Secret Bear should be minted"
       />
       <InformationModal
         open={accessAccountDenied}
